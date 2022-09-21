@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap exercise</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="changeColor.js"></script>
+    <script src="testFont.js"></script>
+  </head>
+  <body>
+    <header style="text-align: center; font-weight: bold; font-size: 200%;">Đoàn Duy Hoàn - B19DCDT088</header>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Dự báo thời tiết</a>
+          <button class="navbar-toggler" type="button" ></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="row">
+            <div class="col">
+              <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+            </div>
+            <div class="col">
+              <div class="row">
+              <a class="nav-link active" aria-current="page" href="#">Địa điểm</a>
+            </div>
+            <div class="row">
+              <select id="places">
+                <option>Hà Nội</option>
+                <option>Hải Phòng</option>
+                <option>Đà nẵng</option>
+                <option>TPHCM</option>
+            </select>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row">
+              <a class="nav-link active" aria-current="page" href="#">Thời gian</a>
+            </div>
+            <div class="row">
+              <select id="time">
+                <option>Hôm nay</option>
+                <option>Ngày mai</option>
+                <option>3 ngày tới</option>
+                <option>7 ngày tới</option>
+              </select>
+            </div>
+          </div>
+        </div>
+            <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Địa điểm</a>
+                <select id="places">
+                    <option>Hà Nội</option>
+                    <option>Hải Phòng</option>
+                    <option>Đà nẵng</option>
+                    <option>TPHCM</option>
+                </select>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Thời gian</a>
+                <select id="places">
+                    <option>Hôm nay</option>
+                    <option>Ngày mai</option>
+                    <option>3 ngày tới</option>
+                    <option>7 ngày tới</option>
+                </select>
+              </li>
+            </ul> -->
+      </nav>
+      <!-- <div class="khoi_1">
+        <table class="table">
+            <thead class="thead-dark">
+               <tr>
+                  <th class="cot1">Nhiệt độ</th>
+                  <th class="cot2">Độ ẩm</th>
+                  <th class="cot3">Ánh sáng</th>
+               </tr>
+               <tr>
+                <th class="cot1">38 độ</th>
+                <th class="cot2">80%</th>
+                <th class="cot3">10</th>
+             </tr>
+            </thead>
+         </table>
+        </div> -->
+        <div class="container-header">
+          <div class="row">
+            <!-- <div class="col-4 temp" onwheel="wheelHandler(event)>
+              <div class="row temp1" onwheel="wheelHandler(event)">Nhiệt độ</div>
+              <div class="row temp2"><p>38°C</p></div>
+            </div> -->
+            <!-- <div id="content" class="col-4 temp" onwheel="wheelHandler(event)" style="font-weight: bold"></div> -->
+            <div id="content" class="col-4 temp" style="font-size:12px;" onwheel ="wheelHandler(event)">
+              <!-- <p class="title">Input (range):</p> -->
+               Nhiệt độ : <span id="valueTemperature"></span> <br>
+               <input id="inputValue" type="range" min ="1" max="11" onchange ="changeHandler(event)"/>
+            </div>
+            <div class="col-4 wet">
+              <div class="row wet1"><p>Độ ẩm</p></div>
+              <div class="row wet2"><p>80%</p></div>
+            </div>
+            <div class="col-4 lightt">
+              <div class="row lightt1"><p>Ánh sáng</p></div>
+              <div class="row lightt2"><p>10p</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="row test">
+          <div class="col-6 t2">
+            <img class="add_image" src="image.png" alt="ảnh thời tiết">
+            <p class="bdo">Biểu đồ thời tiết trong ngày</p>
+          </div>
+          <div class="col-6 t3" >
+            <div class="row r1">
+              <p class="but1">LED 1</p>
+             <div>
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option1" autocomplete="off" checked> LED ON
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option2" autocomplete="off"> LED OFF
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off"> AUTO
+                </label>
+              </div>
+             </div>
+            </div>
+            <div class="row r2">
+              <p class="but1">LED 2</p>      
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+              </label>
+            </div>        
+        </div>
+         <!-- <div class="khoi_2">
+            <table class="table">
+                <thead class="thead-dark">
+                   <tr>
+                      <th class="cot1">
+                            <img id="add_image" src="image.png" alt="lỗi hiển thị" style="margin-left: 25%;">
+                            <p style="text-align: center;">Biểu đồ</p>
+                      </th>
+                      <th class="cot2">
+                            <div style="margin-left: 25%; margin-bottom: 30%">
+                                <button class="btn ">Led 1 on</button>
+                                <button class="btn btn-primary">Led 1 off</button>
+                                <button class="btn btn-primary">Auto</button>
+                            </div>
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons" style="margin-left: 20%; margin-bottom: 10%;">
+                                <label class="btn btn-secondary">
+                                  <input type="radio" name="options" id="option1" autocomplete="off" checked> LED ON
+                                </label>
+                                <label class="btn btn-secondary">
+                                  <input type="radio" name="options" id="option2" autocomplete="off"> LED OFF
+                                </label>
+                                <label class="btn btn-secondary">
+                                  <input type="radio" name="options" id="option3" autocomplete="off"> AUTO
+                                </label>
+                              </div>
+                      </th>
+                    </tr>
+                </thead>
+             </table> -->
+            </div> 
+          </body> 
+</html>

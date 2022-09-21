@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+
+.container-header .row{
+    margin: 0px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: ivory;
+}
+.container-header .t1{
+    background-color: blue;
+}
+.container-header{
+    text-align: center;
+}
+.container-header .temp1{
+    background-color: wheat;
+    font-size: 100%;
+    height: 5vh;
+    width: 50vw;
+    font-weight: bold;
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+}
+.container-header .temp2{
+    background-color: wheat;
+    font-size: 100%;
+    height: 5vh;
+    width: 33.3vw;
+    font-weight: bold;
+    margin: 0%;
+}
+.container-header .wet1{
+    background-color: green;
+    font-size: 100%;
+    height: 5vh;
+    width: 33.3vw;
+    font-weight: bold;
+    margin: 0%;
+}
+.container-header .wet2{
+    background-color: green;
+    font-size: 100%;
+    height: 5vh;
+    width: 33.3vw;
+    font-weight: bold;
+    margin: 0%;
+}
+.container-header .lightt1{
+    background-color: salmon;
+    font-size: 100%;
+    height: 5vh;
+    width: 33.3vw;
+    font-weight: bold;
+    margin: 0%;
+}
+.container-header .lightt2{
+    background-color:salmon;
+    font-size: 100%;
+    height: 5vh;
+    width: 33.3vw;
+    font-weight: bold;
+    margin: 0%;
+}
+.test{
+    border-style: solid;
+    border-width: 1px;
+}
+.test .add_image{
+    height: 70%;
+    width: 100%;
+}
+
+.bdo{
+    text-align: center;
+    font-weight: bold;
+}
+.but1{
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold;
+    margin-top: 5%;
+}
+.test .r1{
+    height: 40%;
+    background-color: indigo;
+}
+
+.test .btn-secondary{
+    margin-left: 75%;
+}
+.test .r2{
+    height: 40%;
+    background-color: blue;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 45%;
+    margin-bottom: 15%;
+  }
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color:deeppink;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  
+.container-header #content{
+    font-weight: bold;
+}
